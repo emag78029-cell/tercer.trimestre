@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+
+.navbar {
+  background-color: #0066cc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  flex-wrap: wrap;
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+
+header {
+  text-align: center;
+  padding: 40px 10px;
+  background: #e8f0ff;
+}
+
+.carrusel {
+  position: relative;
+  max-width: 90%;
+  margin: 30px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.contenedor-carrusel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 5px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+
+.especialidades {
+  text-align: center;
+  padding: 20px;
+}
+
+.contenedor-cartas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.carta {
+  background: white;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.carta img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.carta button {
+  background: #0066cc;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carta button:hover {
+  background: #004999;
+}
+
+.info {
+  display: none;
+  margin-top: 10px;
+}
+
+.formulario {
+  text-align: center;
+  padding: 30px;
+  background: #e8f0ff;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+  gap: 10px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+footer {
+  background: #0066cc;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.redes img {
+  width: 30px;
+  margin: 5px;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .slides img {
+    height: auto;
+  }
+
+  .contenedor-cartas {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .carrusel img {
+    width: 90%;
+    height: 200px;
+  }
+}
+.carrusel img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
